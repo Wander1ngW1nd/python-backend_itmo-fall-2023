@@ -70,18 +70,18 @@ SKIP=black git commit -m "foo"
 
 This project uses [pytest](https://docs.pytest.org/en/latest/) framework for testing.
 
-To run tests, execute the following command:
+To run tests, execute the following command from repository root:
 
 ```bash
 pytest
 ```
 
-To run only unit tests, execute the following:
+To run only unit tests, execute the following from repository root:
 ```bash
 pytest -vm unit
 ```
 
-To run only integration tests, execute the following:
+To run only integration tests, execute the following from repository root:
 ```bash
 pytest -vm integration
 ```
