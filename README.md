@@ -11,6 +11,17 @@ Task:
 * configure linters and formatters
 * add comments and docstrings to functions
 
+In this homework I created several simple functions to test FastAPI
+
+### Homework 2. Testing
+Task:
+* create app utilizing at least 3 funtions
+* develop at least 3 unit tests for every function
+* develop at least 3 integration tests
+* document testing usage
+
+In this homework I created simple delivery price calculating app.
+
 ## Development
 
 ### Dependencies Management
@@ -53,4 +64,24 @@ To skip some hooks while committing:
 
 ```bash
 SKIP=black git commit -m "foo"
+```
+
+### Testing
+
+This project uses [pytest](https://docs.pytest.org/en/latest/) framework for testing.
+
+To run tests, execute the following command from repository root:
+
+```bash
+pytest
+```
+
+To run only unit tests, execute the following from repository root:
+```bash
+pytest -vm unit
+```
+
+To run only integration tests, execute the following from repository root:
+```bash
+pytest -vm integration
 ```
