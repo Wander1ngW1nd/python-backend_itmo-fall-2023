@@ -1,0 +1,37 @@
+services:
+  bgnbd:
+    build: ./bgnbd
+    image: bgnbd:0.0.1
+    container_name: bgnbd
+    command: python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+    volumes:
+      - ./bgnbd/:/app/
+    ports:
+      - 8001:8000
+    environment:
+      - MODEL_PATH="bgnbd.pkl"
+
+  gg:
+    build: ./gg
+    image: gg:0.0.1
+    container_name: gg
+    command: python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+    volumes:
+      - ./gg/:/app/
+    ports:
+      - 8002:8000
+    environment:
+      - MODEL_PATH="gg.pkl"
+
+  clv:
+    build: ./clv
+    image: clv:0.0.1
+    container_name: clv
+    command: python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
+    volumes:
+      - ./clv/:/app/
+    ports:
+      - 8003:8000
+    environment:
+      - BGNBD_SERVICE_URL=http://bgnbd:8000/predict/
+      - GG_SERVICE_URL=http://gg:8000/predict/
