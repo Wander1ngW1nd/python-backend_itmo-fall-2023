@@ -5,7 +5,7 @@ router = APIRouter()
 
 
 @router.get("/predict/")
-async def calculate_delivery_price(frequency: int, monetary_value: float) -> dict:  # pylint: disable=invalid-name
+async def calc_gg(frequency: int, monetary_value: float) -> dict:  # pylint: disable=invalid-name
     if not (frequency > 0 and monetary_value > 0):
         raise HTTPException(status_code=404, detail="All parameters should be positive")
 

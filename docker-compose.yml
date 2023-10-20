@@ -9,7 +9,7 @@ services:
     ports:
       - 8001:8000
     environment:
-      - MODEL_PATH="bgnbd.pkl"
+      - MODEL_PATH=bgnbd.pkl
 
   gg:
     build: ./gg
@@ -21,7 +21,7 @@ services:
     ports:
       - 8002:8000
     environment:
-      - MODEL_PATH="gg.pkl"
+      - MODEL_PATH=gg.pkl
 
   clv:
     build: ./clv
