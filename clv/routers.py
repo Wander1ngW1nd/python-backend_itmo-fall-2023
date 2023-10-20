@@ -10,6 +10,10 @@ router = APIRouter()
 async def calculate_clv(
     t: float, frequency: int, recency: int, T: float, monetary_value: float  # pylint: disable=invalid-name
 ) -> dict:
+    """
+    Predicts customer lifetime value for t periods, given their purchase statistics
+    More about the model nomenclature: https://lifetimes.readthedocs.io/en/latest/Quickstart.html#the-shape-of-your-data
+    """
     if not os.environ.get("BGNBD_SERVICE_URL"):
         raise HTTPException(status_code=404, detail="Environment does not contain BGNBD_SERVICE_URL")
     if not os.environ.get("GG_SERVICE_URL"):
