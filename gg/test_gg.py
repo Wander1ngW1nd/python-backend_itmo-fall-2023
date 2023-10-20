@@ -2,7 +2,9 @@
 # type: ignore
 
 import os
+import sys
 
+sys.path.append("gg/")
 os.environ["MODEL_PATH"] = "gg/gg.pkl"
 
 import pytest

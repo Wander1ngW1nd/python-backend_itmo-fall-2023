@@ -1,6 +1,5 @@
 from fastapi import FastAPI
-
-from bgnbd.routers import router
+from routers import router
 
 app: FastAPI = FastAPI(
     title="BG-NBD model",

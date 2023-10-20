@@ -2,7 +2,9 @@
 # type: ignore
 
 import os
+import sys
 
+sys.path.append("bgnbd/")
 os.environ["MODEL_PATH"] = "bgnbd/bgnbd.pkl"
 
 import pytest

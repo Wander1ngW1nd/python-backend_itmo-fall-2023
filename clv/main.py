@@ -1,7 +1,6 @@
 # type: ignore
 from fastapi import FastAPI
-
-from clv.routers import router
+from routers import router
 
 app: FastAPI = FastAPI(
     title="CLV model",

@@ -1,6 +1,5 @@
 from fastapi import APIRouter, HTTPException
-
-from bgnbd.model import BGNBD
+from model import BGNBD
 
 router = APIRouter()
 

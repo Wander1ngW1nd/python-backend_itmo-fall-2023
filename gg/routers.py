@@ -1,6 +1,5 @@
 from fastapi import APIRouter, HTTPException
-
-from gg.model import GG  # pylint: disable=no-name-in-module
+from model import GG
 
 router = APIRouter()
 

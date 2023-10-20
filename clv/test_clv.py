@@ -2,7 +2,9 @@
 # type: ignore
 
 import os
+import sys
 
+sys.path.append("clv/")
 os.environ["BGNBD_SERVICE_URL"] = "http://bgnbd:8000/predict/"
 os.environ["GG_SERVICE_URL"] = "http://gg:8000/predict/"
 
