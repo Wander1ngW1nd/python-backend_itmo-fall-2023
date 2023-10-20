@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from routers import router
+
+from gg.routers import router
 
 app: FastAPI = FastAPI(
     title="Gamma-Gamma model",

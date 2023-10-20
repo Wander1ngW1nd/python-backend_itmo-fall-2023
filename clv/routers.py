@@ -7,7 +7,7 @@ router = APIRouter()
 
 
 @router.get("/clv/")
-async def calculate_delivery_price(
+async def calculate_clv(
     t: float, frequency: int, recency: int, T: float, monetary_value: float  # pylint: disable=invalid-name
 ) -> dict:
     if not os.environ.get("BGNBD_SERVICE_URL"):
